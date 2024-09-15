@@ -1,0 +1,7 @@
+Client lecouser SAMI request inluides II of
+SP (so that the TPP Brows which SP generated
+Yo SAML request.), SAME request also whites
+ACS URL of SP, is that the IDP Brows whore
+to redirect wer aftor authentication. In the
+request, Spales enfques 2FA as mothed of
+authentintion

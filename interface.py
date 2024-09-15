@@ -1,10 +1,13 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, jsonify
 import os
 import uuid
 import requests
 from PyPDF2 import PdfReader
+from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 # Set the upload folder and allowed file extensions
 UPLOAD_FOLDER = 'uploads'
@@ -46,13 +49,16 @@ def upload_form():
 
 # Route to handle the file upload, extract text, save to file, and summarize
 @app.route('/upload', methods=['POST'])
+@cross_origin()
 def upload_file():
     if 'file' not in request.files:
+        print("File was invalid")
         return 'No file part'
-
+    
     file = request.files['file']
 
     if file.filename == '':
+        print("File was not selected")
         return 'No selected file'
 
     if file and allowed_file(file.filename):
@@ -118,11 +124,13 @@ def upload_file():
         # else:
         #     summary = f"Error: {res.status_code} - {res.text}"
 
-        return f'''
+        print(summary)
+
+        return jsonify({"content": f'''
         <h2>Extracted Text:</h2><pre>{extracted_text}</pre>
         <h2>Summary:</h2><pre>{summary}</pre>
         <br><a href="/download/{unique_filename}">Download the file</a>
-        '''
+        '''})
 
     return 'File type not allowed'
 

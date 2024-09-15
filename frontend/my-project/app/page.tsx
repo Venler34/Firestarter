@@ -2,20 +2,25 @@
 
 import Navbar from "@/components/navbar";
 import UploadButton from "@/components/uploadbutton";
+import Image from "next/image"
+import Link from "next/link"
 
 const api = "http://localhost:8000" // Specify later
 export default function Home() {
   return (
     <div>
       <Navbar />
-      <div className="flex justify-center items-center">
-        <UploadButton />
+      <div className="text-center">
+        <h1 className="text-3xl">RhymEdu</h1>
+        <h2 className="text-xl my-4">"Music is a more potent instrument than any other for education" - Plato</h2>
+        <Link className="bg-[#25F99D] p-2 z-20" href="/content">Try out now!</Link>
       </div>
+      <Image className="w-[1192.19px] h-[535.07px] translate-x-60 -bottom-left rotate-[-23.76deg]" alt="Music Notes" width={1192.19} height={535.07} src="/images/musicNotes.png"/>
     </div>
   );
 }
 
-<div className="w-[414px] h-[179px] bg-[#f82480] rounded-[15px] border-2 border-[#c41c89]/50" />
+<div className="w-[414px] h-[179px] bg-[#f82480] rounded-[15px] border-2 border-[#c41c89]/50 z-0" />
 
 
 

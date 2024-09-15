@@ -13,7 +13,6 @@ export default function UploadButton() {
         event.preventDefault()
 
         if(selectedFile) {
-            const file = document.getElementById('myfile')
             const formData = new FormData()
             formData.append("file", selectedFile)
 

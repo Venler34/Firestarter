@@ -1,5 +1,6 @@
 // import Image from "next/image"
 import Link from "next/link"
+import {UserButton} from "@clerk/nextjs"
 
 
 export default function navbar() {
@@ -10,6 +11,9 @@ export default function navbar() {
                 <Link href="/" className="m-2 text-[#000]">Home</Link>
                 <Link href="/content" className="m-2 text-[#F92581]">Content</Link>
                 <Link href="" className="m-2 text-[#000]">Profile</Link>
+                <div className="inline">
+                    <UserButton showName/>
+                </div>
             </nav>
         </div>
     );

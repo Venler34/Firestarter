@@ -38,7 +38,7 @@ messages = [
 payload = {
     "messages": messages,
     "stream": False,
-    "max_tokens": 2048,
+    "max_tokens": 50,
     "temperature": 0.9
 }
 

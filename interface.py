@@ -105,15 +105,18 @@ def upload_file():
             f"https://model-{MODEL_ID}.api.baseten.co/production/predict",
             headers={"Authorization": f"Api-Key {BASETEN_API_KEY}"},
             json=payload,
-            
+            stream = False
+
         )
-
-        print("Raw Response:", res.text)
-
-        if res.status_code == 200:
-            summary = res.json().get('summary', 'No summary available.')
-        else:
-            summary = f"Error: {res.status_code} - {res.text}"
+        summary = ""
+        # print("Raw Response:", res.text)
+        for chunk in res.iter_content(chunk_size=None):
+            summary += (chunk.decode("utf-8"))
+        # if res.status_code == 200:
+        #     # print(res.json())
+        #     summary = res.json().get('summary', 'No summary available.')
+        # else:
+        #     summary = f"Error: {res.status_code} - {res.text}"
 
         return f'''
         <h2>Extracted Text:</h2><pre>{extracted_text}</pre>

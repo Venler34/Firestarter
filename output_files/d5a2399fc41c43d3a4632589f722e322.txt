@@ -1,0 +1,274 @@
+University of Toronto  PHYSICS  293 Fall 202 3 Midterm #1  
+ 
+- 1 - 
+ NAME:_____________________________  
+STUDENT NUMBER :_______________________________  
+TUTORIAL GROUP:  DAY OF THE WEEK:______________________ TIME:_________  
+ 
+Time: 60 minutes  
+ 
+This is a closed -book exam worth a total of 60 points.  Please answer all questions.  
+ 
+ONLY THE FOLLOWING ITEMS ARE ALLOWED ON YOUR DESK DURING THE EXAM:  
+ 
+1. THIS EXAM BOOK – It contains this cover page, three  question pages and a formula sheet 
+(which may be torn off). Make sure you start by putting your NAME , ID NUMBER, and 
+TUTORIAL GROUP  on the front (cover) page of the exam.  
+The entire exam book (minus the formula sheet)  will be handed in  at the end of the exam and 
+marked.  
+a. FORMULA SHEET , annotated on the printed page. The formula sheet has to be printed 
+from the file provided on Quercus . 
+2. A CALCULATOR , which can be anything that does NOT connect to wifi  and does NOT 
+communicate with other devices. ACCEPTABLE calculators include  programmable and 
+graphing calculators, scientific calculators, etc. UNACCEPTABLE calculators include: cell 
+phones, tablets, laptops, etc.  
+3. A PEN OR PENCIL.  
+4. YOUR STUDENT ID CARD , used to check your identity . 
+ 
+If you are missing anything from the above items, raise your hand and ask an exam supervisor to supply 
+what is missing. If you are missing an item that should have been brought by you (e.g., calculator, 
+pen/pencil) there is a li mited supply of extras and are on a first come, first served basis.  
+ 
+The last page of the midterm (page #6 ) is empty and can be used for scrap notes, but only pages 2 , 3, 
+& 4 will be scanne d for marking.  
+ 
+COMPLETE SOLUTION INCLUDES:  
+a) A sketch with a coordinate system , where appropriate . Where a diagram is provided, additional 
+markings can be added to it.  
+b) Clear and logical workings, including quoting the equations that were used, proper substitutions 
+of numbers  (when necessary)  with all steps clearly indicated.  
+c) The f inal answer with units and three  significant figures.  
+ 
+FOR OFFICE USE ONLY  
+QUESTION  I II III TOTAL  
+MARK     
+MAXIMUM  20 20 20 60 
+ 
+ 
+  University of Toronto  PHYSICS  293 Fall 202 3 Midterm #1  
+ 
+- 2 - 
+ Question I  
+1. A simple pendulum consists of a 
+string of length 𝐿 and a point -like 
+mass 𝑚=0.055  kg attached to it. The 
+graph shows the angular position of 
+the pendulum, 𝜃(𝑡)=𝜃𝐴cos(𝜔𝑡+𝜃𝑖), 
+as a function of time.  
+a. What is the natural frequency of 
+the pendulum? [2 points]  
+ 
+ 
+b. What is the initial phase constant of the pendulum? [6 points]  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+c. What is the total energy of this system? Indicate any assumptions/approximations you used in 
+your calculations. [ 6 points]  
+ 
+ 
+ 
+ 
+ 
+ 
+2. A disturbance on a string is described with an equation 𝑦(𝑥,𝑡)=𝑌𝑜sin(𝑘𝑥)cos(𝜔𝑡+𝜙𝑖). 
+Determine whether this disturbance is a wave. [ 6 points]  
+  
+University of Toronto  PHYSICS  293 Fall 202 3 Midterm #1  
+ 
+- 3 - 
+ Question I I 
+Consider a setup shown in the picture below : two identical masses  𝑚, 𝑚𝐵 on the left and 𝑚𝐴 on the 
+right, connected to each other with a spring 𝑘. The mass on the right (𝑚𝐴) is connected  to a rigid support  
+with a spring 4𝑘. 
+ 
+a. Assuming both masses are displaced from equilibrium of your choice by distances 𝑥𝐴 and 𝑥𝐵, 
+draw (in the picture)  and clearly label the  forces exerted on the masses by the spring. You can 
+assume there is no dampening in the system and that the gravitational force on each mass is 
+balanced by the normal force.  [3 points]  
+ 
+b. Write the equation of motion of each mass.  [4 points]  
+ 
+ 
+ 
+c. Determine the coefficient matrix for this  system  and the normal frequencies of the oscillation. [10 
+points]  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+d. A driver applying force 𝐹(𝑡)=𝐹0cos(𝜔𝑡) is attached to the left side of the set up.  What are the 
+amplitudes  of the normal modes if the driving frequency is equal to the larger of the normal 
+frequencies? [3 points]  
+  
+University of Toronto  PHYSICS  293 Fall 202 3 Midterm #1  
+ 
+- 4 - 
+ Question III  
+Signal 𝑉1(𝑡)=𝑉𝐴(𝑡)cos(𝜔𝑡−3
+4𝜋) is observed across a resistor  𝑅=50.0 Ω in RLC circ uit that also 
+includes capacitor 𝐶=2.0 μF and inductor 𝐿=0.20 H. At time 𝑡=0 𝑉1(0)=2.0 V.  
+a. What is the natural frequency of this circuit? [1 point]  
+ 
+ 
+b. What is the damping factor 𝛾? [1 point]  
+ 
+ 
+ 
+c. What type of behaviour would this system exibit ? Briefly j ustify your answer . [2 points]  
+ 
+ 
+ 
+d. Determine the expressions for current in the circuit  and potential differenc e across the inductor . 
+You do not have to  substitute all values, but you need to be very clear with the symbols you are 
+using. [8 points]  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+e. When the signal measured across the resistor is added a the second, unknown signal  
+ 𝑉2(𝑡)=𝑉𝐵(𝑡)cos(𝜔𝑡+𝜙𝐵) a sinusoidal wave 𝑉(𝑡)=3.0 Vexp (−𝛾
+2𝑡)sin(𝜔𝑡) is recorded. 
+Determine the  amplitude (at time 𝑡=0) and the phase constant 𝜙𝐵 of the second wave. [ 8 points]    University of Toronto  PHYSICS  293 Fall 202 3 Midterm #1  
+ 
+- 5 - 
+ OSCILLATIONS  
+𝜔=2𝜋𝑓=2𝜋
+𝑇 𝜔0=√𝑘
+𝑚 𝜔0=√𝑚𝑔𝑑
+𝐼 𝜔0=1
+√𝐿𝐶 
+𝑥(𝑡)=𝐴cos(𝜔𝑡+𝜙𝑖) 𝑥(𝑡)=𝐴0exp (−𝛾𝑡
+2)cos(𝜔𝑡+𝜙𝑖)) 𝑥(𝑡)=𝐴(𝜔)cos(𝜔𝑡−𝛿) 
+𝑥(𝑡)=𝐴exp (−𝛾𝑡
+2)+𝐵𝑡exp (−𝛾𝑡
+2) 𝑥(𝑡)=𝐴exp ((−𝛾
+2+(|𝜔02−𝛾2
+4|)1
+2
+)𝑡)+𝐵exp ((−𝛾
+2−(|𝜔02−𝛾2
+4|)1
+2
+)𝑡) 
+𝑞0(𝜔)=𝜀0
+𝜔𝑍 𝑞(𝑡)=𝑞0(𝜔)cos(𝜔𝑡−𝛿) 𝑍=√(1
+𝜔𝐶−𝜔𝐿 )2
++𝑅2 𝑖=𝑑𝑞
+𝑑𝑡 
+𝑉𝑅=𝑖(𝑡)𝑅 𝑉𝐶=𝑞
+𝐶 𝑉𝐿=𝐿𝑑𝑖
+𝑑𝑡  
+𝐾=1
+2𝑚𝑣2 𝑈=1
+2𝑘𝑥2 𝐸(𝑡)=𝐸0exp(−𝛾𝑡) 𝑃=𝑑𝐸
+𝑑𝑡=𝐹𝑣 
+𝑄=𝜔0
+𝛾 𝜔2=𝜔02−𝛾2
+4 𝛾=𝑏
+𝑚 𝛾=𝑅
+𝐿   
+𝐴(𝜔)=𝑎𝜔02
+√(𝜔02−𝜔2)2+(𝛾𝜔)2 tan𝛿=𝜔𝛾
+𝜔02−𝜔2 
+𝑃̅(𝜔)=𝑏[𝑣0(𝜔)]2
+2 𝑃̅𝑚𝑎𝑥 =𝐹02
+2𝑚𝛾 𝑃̅(𝜔)=𝐹02
+2𝑚𝛾[4(Δ𝜔)2
+𝛾2 +1] 
+WAVES  
+𝑣=𝜆𝑓 𝑦(𝑥,𝑡)=𝑓(𝑥±𝑣𝑡) 𝑦(𝑥,𝑡)=𝐴cos (𝑘𝑥±𝜔𝑡+𝜙𝑖) 
+𝑘=2𝜋
+𝜆 𝑦(𝑥,𝑡)=(𝐴sin(𝑘𝑥)+𝐵cos(𝑘𝑥))cos(𝜔𝑡) 
+𝑣=√𝐹𝑇
+𝜇 𝑣=√𝐵
+𝜌 𝑣=√𝑌
+𝜌 𝑣=√𝛾𝑅𝑇
+𝑀 𝜕𝑦2
+𝜕𝑡2=𝑣2𝜕2𝑦
+𝜕𝑥2 𝜔=2𝜋
+𝑇 𝑓=1
+𝑇 
+𝜔𝑛=𝑛𝜋𝑣
+𝐿 𝜔𝑛=𝑛𝜋𝑣
+2𝐿 𝑓𝑛=𝑛𝑓1 𝐸𝑛=1
+4𝜇𝜔𝑛2𝐴𝑛2𝐿 
+𝐴𝑛=2
+𝐿∫𝑓(𝑥)sin(𝑛𝜋
+𝐿𝑥)𝑑𝑥𝐿
+0 𝑃𝑎𝑣𝑒=1
+2𝑍𝐴2𝜔2 𝐼𝑎𝑣𝑒=1
+2𝑍𝑎𝐴2𝜔2 𝑃=𝜇𝑣𝐴2𝜔2sin2(𝑘𝑥−𝜔𝑡+𝜙0) 
+𝑍=√𝜇𝜏 𝑍𝑎=√𝑌𝜌 𝑍𝑎=√𝐵𝜌 𝑅=𝑍1−𝑍2
+𝑍1+𝑍2 𝑇=2𝑍1
+𝑍1+𝑍2 
+𝐼(𝑟)=𝐼(𝑟0)[𝑒−𝛼(𝑟−𝑟0)](𝑟0
+𝑟)𝑁−1
+ 𝑣𝑔=𝑑𝜔
+𝑑𝑘|𝑘=𝑘0 𝑣𝑔=𝑣−𝜆𝑑𝑣
+𝑑𝜆 𝑅2+𝑍2
+𝑍1𝑇2=1  
+𝑐=(𝜇0𝜀0)−1
+2 𝑣=𝑐
+𝑛  𝐴𝑛=2
+𝐿∫𝑓(𝑥)sin(𝑛𝜋
+𝐿𝑥)𝑑𝑥𝐿
+0 
+MATHEMATICAL FORMULAE  
+cos𝛼+cos𝛽=2cos[𝛼+𝛽
+2]cos[𝛼−𝛽
+2] cos𝛼−cos𝛽=−2sin[𝛼+𝛽
+2]sin[𝛼−𝛽
+2] 
+sin𝛼+sin𝛽=2sin[𝛼+𝛽
+2]cos[𝛼−𝛽
+2] sin𝛼−sin𝛽=2cos[𝛼+𝛽
+2]sin[𝛼−𝛽
+2] 
+cos(𝛼±𝛽)=cos𝛼cos𝛽∓sin𝛼sin𝛽 sin( 𝛼±𝛽)=sin𝛼cos𝛽±sin𝛽cos𝛼 
+det[𝑎11 𝑎12
+𝑎21 𝑎22]=𝑎11𝑎22−𝑎12𝑎21 tan−1(𝑥)={𝜃,𝜃+𝜋}+2𝜋𝑛 
+cos−1(𝑥)=±𝜃+2𝜋𝑛 
+cos2𝜃=1
+2(1+cos(2𝜃)) sin−1(𝑥)={𝜃,𝜋−𝜃}+2𝜋𝑛 
+𝑥=−𝑏±√𝑏2−4𝑎𝑐
+2𝑎 sin𝜃=cos(𝜃−𝜋
+2) 𝐴̃=𝐴𝑒𝑗𝜃=𝐴(cos𝜃+𝑗sin𝜃) 
+∫sin(𝑎𝑥)𝑑𝑥=−1
+𝑎cos(𝑎𝑥) ∫𝑥sin(𝑎𝑥)𝑑𝑥=1
+𝑎2sin(𝑎𝑥)−𝑥
+𝑎cos(𝑎𝑥) 
+CONSTANTS  
+𝑐=3.00×108m
+s  𝜇0=4𝜋×10−7 T⋅m
+A 𝜀0=8.85×10−12 N⋅m
+C2 𝑔=9.81m
+s 
+𝑣𝑠𝑜𝑢𝑛𝑑  𝑎𝑡 20℃ =343m
+s 𝑇𝐾=𝑇℃+273 .15℃    
+ 
+ 
+ 
+ 
+ 

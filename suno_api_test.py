@@ -19,9 +19,12 @@ with open("output.txt", "r") as file:
 # Data to send in the POST request
 data = {
     "topic": topic, 
-    # "prompt": "This is a song about HackMIT\n yeah HackMIT\n yeah HackMIT\n la la la",
+    "prompt": "This is a song about HackMIT\n yeah HackMIT\n yeah HackMIT\n la la la",
     "tags": " hip hop",
 
+    # "prompt": "This is a song about HackMIT\n yeah HackMIT\n yeah HackMIT\n la la la",
+	# "tags": "pop",
+	# "mv": "chirp-v3-5"
 }
 
 # Generate a song by making a POST request

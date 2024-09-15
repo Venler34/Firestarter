@@ -8,7 +8,10 @@ export default function UploadButton() {
     const [showMusic, setShowMusic] = useState(false)
     const [uploadFile, setUploadfile] = useState(true)
     const [selectedFile, setSelectedFile] = useState<File|null>(null)
+    const [isVideoReady, setIsVideoReady] = useState(false); // Tracks if the video is ready after 40 seconds
+
     const api = "http://127.0.0.1:5000"
+    
     async function onSubmit(event: FormEvent<HTMLFormElement>){
         event.preventDefault()
 
@@ -34,6 +37,11 @@ export default function UploadButton() {
             setUploadfile(true)
             setVideoLink(data.song_link)
             setSummary(data.summary)
+            setTimeout(() => {
+                setVideoLink(data.song_link); // Set video link after delay
+                setIsVideoReady(true); // Indicate that the video is ready after 40 seconds
+                setShowMusic(true);
+              }, 40000); // 40-second delay
             setShowMusic(true)
         }
       }
@@ -68,14 +76,34 @@ export default function UploadButton() {
                     </div>
                 </form>
             ) : (<h1 className="text-4xl text-center">Loading....</h1>))}
-            {
-                showMusic && (
-                    <div className="my-10">
-                        <button className="p-4 mx-8 bg-[#25F99D] text-[#FFF]">Save Song!</button>
-                        <button className="p-4 bg-[#F92581] text-[#FFF]" onClick={() => {setShowMusic(false)}}>Load Lecture</button>
-                    </div>
-                )
-            }
+           {showMusic && (
+            <div className="my-10">
+            {isVideoReady ? (
+                <a
+                href={videoLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-4 bg-[#25F99D] text-[#FFF] hover:bg-sky-700 rounded-md"
+                >
+                Open Video
+                </a>
+            ) : (
+                <button
+                disabled
+                className="p-4 bg-gray-500 text-[#FFF] rounded-md"
+                >
+                Video is not ready
+                </button>
+            )}
+            <button className="p-4 mx-8 bg-[#25F99D] text-[#FFF]">Save Song!</button>
+            <button
+                className="p-4 bg-[#F92581] text-[#FFF]"
+                onClick={() => setShowMusic(false)}
+            >
+                Load Lecture
+            </button>
+            </div>
+      )}
         </div>
     )
 }

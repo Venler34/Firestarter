@@ -2,9 +2,6 @@
 
 import Navbar from "@/components/navbar"
 import UploadButton from "@/components/uploadbutton"
-import Image from "next/image"
-import Skeleton from 'react-loading-skeleton'
-import {useState} from "react"
 
 export default function Page() {
     return (

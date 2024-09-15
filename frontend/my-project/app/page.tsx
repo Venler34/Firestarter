@@ -9,7 +9,7 @@ export default function Home() {
     <div>
       <Navbar />
       <div className="text-center">
-        <h1 className="text-3xl">RhymEdu</h1>
+        <h1 className="text-3xl">RhythmEdu</h1>
         <h2 className="text-xl my-4">&quot;Music is a more potent instrument than any other for education&quot; - Plato</h2>
         <Link className="bg-[#25F99D] p-2 z-20" href="/content">Try out now!</Link>
       </div>

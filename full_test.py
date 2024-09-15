@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, jsonify
+from flask import Flask, render_template, request, redirect, url_for, jsonify, render_template_string
 import os
 import uuid
 import requests
@@ -14,7 +14,7 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 
 # Set the upload folder and allowed file extensions
 UPLOAD_FOLDER = 'uploads'
-ALLOWED_EXTENSIONS = {'txt', 'pdf'}
+ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg'}
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
@@ -38,6 +38,22 @@ def extract_text_from_pdf(file_path):
     for page in reader.pages:
         text += page.extract_text() or ''
     return text
+from google.cloud import vision
+import io
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = r"tactile-welder-435618-k3-bac3fa5999db.json"
+client = vision.ImageAnnotatorClient()
+
+def detectText(img_path):
+    with io.open(img_path, 'rb') as image_file:
+        content = image_file.read()
+
+    image = vision.Image(content=content)
+    response = client.document_text_detection(image=image)
+
+    # Extract text from the OCR response
+    extracted_text = response.full_text_annotation.text
+    return extracted_text
+
 
 # Route for the upload form
 @app.route('/')
@@ -94,6 +110,8 @@ def upload_file():
             extracted_text = extract_text_from_txt(file_path)
         elif filename.endswith('.pdf'):
             extracted_text = extract_text_from_pdf(file_path)
+        elif filename.lower().endswith(('.png', '.jpg', '.jpeg')):
+            extracted_text = detectText(file_path)  # OCR for images
         else:
             return 'Unsupported file format'
 
@@ -115,14 +133,15 @@ def upload_file():
         BASETEN_API_KEY = "YMKFudUr.FcjOTi13DlaR3ZtCbBIumoXeqFJy25yx"
 
         messages = [
-            {"role": "system", "content": "You are someone that is going to be an expert summarizer professor who will summarize the text that I provide to you. You need to summarize the content to under 250 characters. Remove the sentence here is a summary."},
+            {"role": "system", "content": "You are someone that is going to be an expert summarizer professor who will summarize the text that I provide to you. Do not include the introduction sentence here is a summary under 250 characters please. You need to summarize the content to under 250 characters. "},
             {"role": "user", "content": extracted_text},
         ]
+
 
         payload = {
             "messages": messages,
             "stream": False,
-            "max_tokens": 2048,
+            "max_tokens": 70,
             "temperature": 0.9
         }
 
@@ -167,68 +186,42 @@ def upload_file():
             song_id = song_response_data.get("id")
 
             print(f"Song generation initiated with ID: {song_id}")
-            # def poll_song_status(song_id):
-            #     feed_url_with_ids = f"{FEED_URL}?ids={song_id}"
-            #     while True:
-            #         response = requests.get(feed_url_with_ids, headers=headers)
-                    
-            #         if response.status_code == 200:
-            #             response_data = response.json()
-                        
-            #             # Check if "clips" are available
-            #             if "clips" in response_data and response_data["clips"]:
-            #                 clip = response_data["clips"][0]
-            #                 status = clip["status"]
-                            
-            #                 if status == "complete":
-            #                     audio_url = clip.get("audio_url")
-            #                     print(f"Song generation complete. Audio URL: {audio_url}")
-            #                     return audio_url
-            #                 else:
-            #                     print(f"Song status: {status}. Retrying in 5 seconds...")
-            #             else:
-            #                 print("No clips found. Retrying in 5 seconds...")
-            #         else:
-            #             print(f"Error fetching status: {response.status_code} - {response.text}")
-            #             return None
-
-            #         time.sleep(5)
-
-            # # Use the song_id obtained from the previous step
-            # audio_url = poll_song_status(song_id)
+          
             song_link = f"https://cdn1.suno.ai/{song_id}.mp4"
+
+            
             return jsonify({"song_link": song_link, "summary":summary})
-            # download the file at song_link
-            song_filename = f"{song_id}.mp4"
-            print(time.time())
-            time.sleep(35)
-            download_mp4(song_link, song_filename)
-            print("song filename", song_filename)
+            # # download the file at song_link
+            # song_filename = f"{song_id}.mp4"
+            # print(time.time())
+            # time.sleep(35)
+            # download_mp4(song_link, song_filename)
+            # print("song filename", song_filename)
 
-            html_content = f'''
-                <!DOCTYPE html>
-                <html lang="en">
-                <head>
-                    <meta charset="UTF-8">
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <title>Video Embed Example</title>
-                </head>
-                <body>
-                    <h1>Embedded Video</h1>
-                    <video width="640" height="360" controls>
-                        <source src={song_filename} type="video/mp4">
-                    </video>
-                </body>
-                </html>
+            # html_content = f'''
+            #     <!DOCTYPE html>
+            #     <html lang="en">
+            #     <head>
+            #         <meta charset="UTF-8">
+            #         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            #         <title>Video Embed Example</title>
+            #     </head>
+            #     <body>
+            #         <h1>Embedded Video</h1>
+            #         <video width="640" height="360" controls>
+            #             <source src={song_filename} type="video/mp4">
+            #         </video>
+            #     </body>
+            #     </html>
             
-            '''
+            # '''
             
-            # Return or save the HTML content as needed
-            with open('video_embed.html', 'w') as file:
-                file.write(html_content)
-            print("HTML content saved as video_embed.html")
+            # # Return or save the HTML content as needed
+            # with open('video_embed.html', 'w') as file:
+            #     file.write(html_content)
+            # print("HTML content saved as video_embed.html")
 
-            return html_content
+            # return html_content
             
         else:
             return f'Error generating song: {song_response.status_code} - {song_response.text}'

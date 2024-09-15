@@ -45,7 +45,7 @@ export default function UploadButton() {
         }
     }
     return (
-        <div className="my-52 flex justify-center">
+        <div className="my-52 flex flex-col justify-center items-center">
             {
                 showMusic && (<Music videoLink={videoLink} summary={summary}/>)
             }
@@ -69,6 +69,14 @@ export default function UploadButton() {
                     </div>
                 </form>
             ) : (<h1 className="text-4xl text-center">Loading....</h1>))}
+            {
+                showMusic && (
+                    <div className="my-10">
+                        <button className="p-4 mx-8 bg-[#25F99D] text-[#FFF]">Save Song!</button>
+                        <button className="p-4 bg-[#F92581] text-[#FFF]" onClick={() => {setShowMusic(false)}}>Load Lecture</button>
+                    </div>
+                )
+            }
         </div>
     )
 }

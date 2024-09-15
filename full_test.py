@@ -1,11 +1,16 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, jsonify
 import os
 import uuid
 import requests
 from PyPDF2 import PdfReader
 import time
+from flask_cors import CORS, cross_origin
+
 
 app = Flask(__name__)
+
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 # Set the upload folder and allowed file extensions
 UPLOAD_FOLDER = 'uploads'
@@ -69,6 +74,7 @@ def download_mp4(url, song_filename):
 
 # Route to handle the file upload, extract text, summarize, and generate a song
 @app.route('/upload', methods=['POST'])
+@cross_origin()
 def upload_file():
     if 'file' not in request.files:
         return 'No file part'
@@ -129,14 +135,16 @@ def upload_file():
         
         summary = ""
         for chunk in res.iter_content(chunk_size=None):
-            if len(summary) > 200:
+            if len(summary) > 200: # goes over the word count
                 break
             summary += (chunk.decode("utf-8"))
-        print("summary", summary)
+
+        # limit to less than 250 characters
+        print("summary", summary[:250])
 
 
         # Generate a song based on the summarized text
-        API_TOKEN = 'RMhDJXO2yeXd1mhvtyGVZ4L4DC23wLpv'
+        API_TOKEN = 'mK5w7UUPdrLR8eRtuU5Pk1DdKlXGsI30'
         GENERATE_URL = 'https://studio-api.suno.ai/api/external/generate/'
         FEED_URL = 'https://studio-api.suno.ai/api/external/clips/'
         # GENERATE_URL = 'https://studio-api.suno.ai/api/generate/lyrics/'
@@ -189,6 +197,7 @@ def upload_file():
             # # Use the song_id obtained from the previous step
             # audio_url = poll_song_status(song_id)
             song_link = f"https://cdn1.suno.ai/{song_id}.mp4"
+            return jsonify({"song_link": song_link, "summary":summary})
             # download the file at song_link
             song_filename = f"{song_id}.mp4"
             print(time.time())

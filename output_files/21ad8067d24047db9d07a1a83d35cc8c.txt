@@ -1,0 +1,9 @@
+Black-body radiation is the thermal electromagnetic radiation within, or surrounding, a body in thermodynamic equilibrium with its environment, emitted by a black body (an idealized opaque, non-reflective body). It has a specific, continuous spectrum of wavelengths, inversely related to intensity, that depend only on the body's temperature, which is assumed, for the sake of calculations and theory, to be uniform and constant.[1][2][3][4]
+
+
+As the temperature of a black body decreases, the emitted thermal radiation decreases in intensity and its maximum moves to longer wavelengths. Shown for comparison is the classical Rayleigh–Jeans law and its ultraviolet catastrophe.
+A perfectly insulated enclosure which is in thermal equilibrium internally contains blackbody radiation, and will emit it through a hole made in its wall, provided the hole is small enough to have a negligible effect upon the equilibrium. The thermal radiation spontaneously emitted by many ordinary objects can be approximated as blackbody radiation.
+
+Of particular importance, although planets and stars (including the Earth and Sun) are neither in thermal equilibrium with their surroundings nor perfect black bodies, blackbody radiation is still a good first approximation for the energy they emit. [5]
+
+The term black body was introduced by Gustav Kirchhoff in 1860.[6] Blackbody radiation is also called thermal radiation, cavity radiation, complete radiation or temperature radiation.

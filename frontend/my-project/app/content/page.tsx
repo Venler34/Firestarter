@@ -33,7 +33,7 @@ export default function Page() {
         <div>
             <Navbar/>
             <div className="text-center">
-                <h1 className="text-3xl">RhymthEdu Music Educator</h1>
+                <h1 className="text-3xl">RhythmEdu Music Educator</h1>
                 <h1>Just drag your notes about anything into the drop box for a cool soundtrack</h1>
             </div>
             <UploadButton/>

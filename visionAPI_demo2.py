@@ -26,7 +26,7 @@ def detectText(img):
     correction_response = openai.ChatCompletion.create(
         model="gpt-4o-mini",
         messages=[
-            {"role": "system", "content": "You are a helpful assistant that corrects grammatical mistakes."},
+            {"role": "system", "content": "You are a helpful assistant that corrects grammatical mistakes. You only generate the output, with no explanations or introductions."},
             {"role": "user", "content": f"Correct the grammatical mistakes in the following text: {extracted_text}"}
         ]
     )
@@ -37,7 +37,6 @@ def detectText(img):
 
 
 
-FILE_NAME = 'testhandimg3.png'
+FILE_NAME = 'testhandimg1.png'
 FOLDER_PATH = r'D:\HackMIT\VisionApiDemo\img'
 detectText(os.path.join(FOLDER_PATH, FILE_NAME))
-

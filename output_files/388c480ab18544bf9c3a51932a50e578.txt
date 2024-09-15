@@ -1,0 +1,96 @@
+LECTURE 03
+THEDAMPED HARMONIC OSCILLATOR
+LIGHT DAMPING
+CRITICAL DAMPING
+OVERDAMPINGMONDAY , 9 S EPTEMBER  2024REVIEW
+𝜃𝑥𝑡=𝐴cos 𝜔𝑡+𝜙0
+𝐹∝−𝑣OSCILLATION
+DRAG FORCETHE EQUATION  OF MOTION  FOR A DAMPED  HARMONIC  
+OSCILLATOR
+The forces  involved  in dissipation  are complex,  but linear  drag  model  
+gives  quite  accurate  description .
+ Drag  force  𝐹𝑑=−𝑏𝑣
+𝑚Ԧ𝑣Ԧ𝐹𝑑 Ԧ𝐹𝑠
+𝐹𝑛𝑒𝑡𝑥=𝑚𝑎𝑥=−𝑘𝑥−𝑏𝑣
+𝑚𝑑2𝑥
+𝑑𝑡2+𝑏𝑑𝑥
+𝑑𝑡+𝑘𝑥=0
+Introducing: 𝜔02=𝑘
+𝑚,  𝛾=𝑏
+𝑚
+𝑑2𝑥
+𝑑𝑡2+𝛾𝑑𝑥
+𝑑𝑡+𝜔𝑜2𝑥=0𝜔𝑜2 - natural frequency of the oscillation 
+(as in the frequency it would have had 
+without any damping)
+Note: at higher speeds 𝐹𝑑∝𝑣2, but we will stay in the regime of the linear 
+dependence of the damping force on velocityTHE EQUATION  OF MOTION  FOR A DAMPED  HARMONIC  
+OSCILLATOR
+𝑑2𝑥
+𝑑𝑡2+𝛾𝑑𝑥
+𝑑𝑡+𝜔𝑜2𝑥=0
+(This is not ODE course, so I apologize for any shortcuts, but to find general solution 
+a good strategy is to find specific solutions 𝑓(𝑡) and superimpose them)
+A good guess for specific solution 𝑓𝑡=exp(−𝕚𝜔𝑡)
+THE EQUATION  OF MOTION  FOR A DAMPED  HARMONIC  
+OSCILLATOR
+The solution we got has both imaginary and real part, 𝜔=𝜔𝑅+𝕚𝜔𝐼
+We can write 
+𝑓𝑡=exp −𝕚𝜔𝑡 =exp(𝜔𝐼𝑡)exp(−𝕚𝜔𝑅𝑡)
+LIGHT DAMPING
+Qualitatively  – in the presence  of a damping  
+force  one expects  the oscillation  to continue  
+while  the amplitude  decreases  exponentially,
+ 
+When  𝜔02>𝛾2
+4→𝜔= 𝜔02−𝛾2
+4mԦ𝑣Ԧ𝐹𝑑 Ԧ𝐹𝑠
+𝒙𝒕=𝑨𝟎𝐞𝐱𝐩 −𝜸𝒕
+𝟐𝐜𝐨𝐬(𝝎𝒕+𝝓𝟎)LIGHT DAMPING
+mԦ𝑣Ԧ𝐹𝑑 Ԧ𝐹𝑠
+𝛾=𝑏
+𝑚
+𝜔2=𝜔𝑜2−𝛾2
+4
+The general solution for a lightly damped (underdamped) oscillator
+𝑥𝑡=𝐴0exp −𝛾𝑡
+2cos(𝜔𝑡+𝜙0)
+HEAVY DAMPING
+Heavy  damping  occurs  when  the degree  of damping  is large  enough  to have  system  
+sluggishly  return  to equilibrium  position  (“dead  beat”) .
+When
+𝜔02<𝛾2
+4→Γ=𝛾2
+4−𝜔02→ 𝜔02−𝛾2
+4=𝕚ΓmԦ𝑣Ԧ𝐹𝑑 Ԧ𝐹𝑠
+The real solution isCRITICAL  DAMPING
+When  𝜔02−𝛾2
+4=0, equationmԦ𝑣Ԧ𝐹𝑑 Ԧ𝐹𝑠
+General solution to that equation 𝑓=𝐴+𝐵𝑡, leading to
+𝒙𝒕=𝑨𝐞𝐱𝐩 −𝜸𝒕
+𝟐+𝑩𝒕𝐞𝐱𝐩 −𝜸𝒕
+𝟐
+Dimension of length Dimension of speedDAMPED  OSCILLATIONS
+UNDERDAMPED  OSCILLATION  – THE SYSTEM  
+RETURNS  TO THE EQUILIBRIUM  WHILE  STILL  
+OSCILLATING  WITH AMPLITUDE  DECREASING  
+EXPONENTIALLY .
+CRITICALLY  (DASH ) AND OVERDAMPED  (DOTS ) 
+OSCILLATOR  – NO OSCILLATION  HAPPENS .EXAMPLE  03A
+A mass  𝑚=3.0 kg is attached  to a spring  that has a value  of 𝑘=600N
+m.
+a)Determine  the value  of damping  constant  𝑏 that would  produce  critical  damping
+b)Determine  the value  of damping  constant  𝑏 that would  decrease  angular  frequency  
+by 10%.
+c)A critically  damped  mass  receives  an impulse  that gives  it initial  velocity  𝑣=
+2.0m
+s. What  is the value  of maximum  resultant  displacement  and the time when  it 
+occurs .EXAMPLE  03A
+A critically  damped  mass  receives  an impulse  that gives  it initial  velocity  
+𝑣=2.0m
+s. What  is the value  of maximum  resultant  displacement  and the 
+time when  it occurs .EXAMPLE  03B
+Determine the time needed for the amplitude of the damped oscillator with spring 
+constant 𝑘=10.0 𝑁/𝑚 and mass 𝑚=0.25𝑘𝑔  and damping factor 𝑏=0.025𝑘𝑔
+𝑠 to 
+decrease to the 25% of its original value.

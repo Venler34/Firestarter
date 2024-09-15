@@ -1,0 +1,2 @@
+Include the specific definition of heisenberg Uncertainty Principle, scientifically.
+Werner Heisenberg's 1927 Uncertainty Principle states that precise knowledge of a particle's position and momentum are mutually exclusive.

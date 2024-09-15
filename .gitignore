@@ -1,3 +1,4 @@
 .conda
 .env
-api
+# *.json
+# !spec/*.json

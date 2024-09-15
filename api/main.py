@@ -1,4 +1,4 @@
-from fastapi import FastAPI, UploadFile
+from fastapi import FastAPI, UploadFile, File
 from typing import Annotated
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.encoders import jsonable_encoder
@@ -31,5 +31,5 @@ def read_root():
     return JSONResponse(content=json_compatible_item_data)
 
 @app.post("/uploadfile/")
-def get_pdf(file: UploadFile):
+def get_pdf(file: UploadFile = File(...)):
     return {"filename": file.filename}
